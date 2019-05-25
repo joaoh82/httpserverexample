@@ -10,7 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/hello/sayhello", echoPayload)
 	log.Println("Go Backend: { HTTPVersion = 1 }; serving on https://localhost:9191/hello/sayhello")
-	log.Fatal(http.ListenAndServeTLS(":9191", "./cert/server.crt", "./cert/server.key", nil))
+	log.Fatal(http.ListenAndServeTLS(":9191", "../cert/server.crt", "../cert/server.key", nil))
 }
 
 func echoPayload(w http.ResponseWriter, r *http.Request) {

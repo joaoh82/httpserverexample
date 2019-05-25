@@ -17,7 +17,7 @@ func main() {
 	_ = http2.ConfigureServer(&httpServer, &http2Server)
 	http.HandleFunc("/hello/sayHello", echoPayload)
 	log.Printf("Go Backend: { HTTPVersion = 2 }; serving on https://localhost:9191/hello/sayHello")
-	log.Fatal(httpServer.ListenAndServeTLS("./cert/server.crt", "./cert/server.key"))
+	log.Fatal(httpServer.ListenAndServeTLS("../cert/server.crt", "../cert/server.key"))
 }
 
 func echoPayload(w http.ResponseWriter, req *http.Request) {

@@ -16,7 +16,7 @@ func main() {
 	client := &http.Client{}
 
 	// Create a pool with the certificate, since it is not signed by any CA
-	caCert, err := ioutil.ReadFile("../cert/server.crt")
+	caCert, err := ioutil.ReadFile("../../cert/server.crt")
 	if err != nil {
 		log.Fatalf("Error reading certificate. %s", err)
 	}
